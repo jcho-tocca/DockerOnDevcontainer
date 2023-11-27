@@ -1,0 +1,42 @@
+{
+	"name": "Laravel",
+	// PHP開発用のイメージ
+	"image": "mcr.microsoft.com/devcontainers/php:1-8.2-bullseye",
+
+	"features": {
+		// docker、docker-composeインストール
+		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
+		// makeインストール
+		"ghcr.io/jungaretti/features/make:1": {},
+		// node.jsインストール
+		"ghcr.io/devcontainers/features/node:1": {
+			"version": "latest"
+		}
+	},
+
+	"customizations": {
+		// vscodeの拡張機能
+		"vscode": {
+			"extensions": [
+				"bmewburn.vscode-intelephense-client",
+				"neilbrayfield.php-docblocker",
+				"xdebug.php-debug",
+				"amiralizadeh9480.laravel-extra-intellisense",
+				"austenc.laravel-blade-spacer",
+				"ryannaddy.laravel-artisan",
+				"ctf0.laravel-goto-controller",
+				"absszero.vscode-laravel-goto",
+				"codingyu.laravel-goto-view",
+				"onecentlin.laravel-blade",
+				"mikestead.dotenv",
+				"ms-azuretools.vscode-docker"
+			]
+		}
+	},
+	// ホスト側のファイルパス
+	"remoteEnv": {
+		"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
+	},
+	
+	"remoteUser": "vscode"
+}
